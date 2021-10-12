@@ -14,19 +14,28 @@
         <header>
             <div class="logo">Интернет-магазин</div>
 
-            <form action="" class="searchForm">
+            <form action="" class="searchForm" @submit.prevent="filterGoods()">
                 <input type="search">
-                <button type="button" class="search-btn">Найти</button>
+                <button type="submit" class="search-btn">Найти</button>
             </form>
 
 
             <div class="cart">
-                <button class="btn-cart" type="button">Корзина</button>
-                <div class="invCart"></div>
+                <button class="btn-cart" type="button" @click="visibleCart()">Корзина</button>
+                <div id="Cart" class="invCart"></div>
             </div>
         </header>
         <main>
-            <div class="products"></div>
+            <div class="products">
+                <div class="product-item" v-for="good of goods" :key="good.product_id">
+                    <img :src="imgCatalog" alt="some img">
+                    <div class="desc">
+                        <h3>{{good.product_name}}</h3>
+                        <p>{{good.price}}₽</p>
+                        <button class="buy-btn" @click="addProduct(good)">Купить</button>
+                    </div>
+                </div>
+            </div>
         </main>
         <!--beforebegin-->
         <!--<p>-->
