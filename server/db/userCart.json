@@ -1,0 +1,18 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 6,
+            "id_product": 124,
+            "product_name": "Keyboard",
+            "price": 1600
+        },
+        {
+            "quantity": 5,
+            "id_product": 123,
+            "product_name": "Ноутбук",
+            "price": 45600
+        }
+    ]
+}
